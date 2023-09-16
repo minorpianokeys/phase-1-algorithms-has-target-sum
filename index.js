@@ -1,13 +1,28 @@
+hasTargetSum([1, 2, 5], 4)
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      const sum = array[i] + array[j];
+      console.log(sum)
+      if (sum === target) {
+        return true
+      }
+    }
+  }
+  return false
 }
+
 
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
-  Add your pseudocode here
+  iterate through array 
+  add current index to every number in array 
+  if sum equals target return true
+  else return false
 */
 
 /*
